@@ -3,10 +3,10 @@
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__actions">
-                    <img src="./images/logo-footer.png" alt="">
+                    <img src="<?php echo get_field('footer_logo') ?>" alt="">
                 <ul>
-                        <li><img src="./images/icon-google.png" alt=""></li>
-                        <li><img src="./images/icon-ios.png" alt=""></li>
+                        <li><img src="<?php echo get_field('footer_google_play') ?>" alt=""></li>
+                        <li><img src="<?php echo get_field('footer_apple_store') ?>" alt=""></li>
                 </ul>
 
                 <ul>
@@ -34,6 +34,28 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  
+  
+  <script>
+ 
+  const toggleBtn = document.querySelector('.toggle__button')
+  const dropdown = document.querySelector('.dropdown')
+
+  const closeBtn = document.querySelector('.close')
+
+
+  toggleBtn.addEventListener('click', ()=> {
+    dropdown.classList.add('show');
+    toggleBtn.classList.add('cross');
+  })
+
+  closeBtn.addEventListener('click', ()=> {
+    dropdown.classList.remove('show');
+    toggleBtn.classList.remove('cross');
+  })
+  </script>
+  
     <?php wp_footer() ?>
 </body>
 </html>

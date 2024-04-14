@@ -18,3 +18,5 @@ add_action('wp_enqueue_scripts', 'mcdo_assets');
 
 
 add_theme_support( 'post-thumbnails' );
+
+require_once get_template_directory() . '/includes/custom-post-type.php';   
